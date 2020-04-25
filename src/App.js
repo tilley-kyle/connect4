@@ -14,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App-header">
-        <div className="Board">stuff</div>
+        <div className="Board"><Board /></div>
       </div>
       )}
 }

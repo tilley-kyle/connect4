@@ -29,9 +29,9 @@
 }
 
 .Tile {
-  display: grid;
-  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: auto;
 }
 
 .Board {
@@ -40,7 +40,9 @@
   grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
   min-height: 75vh;
   min-width: 75vw;
+  color: black;
   background-color: aqua;
+
 }
 
 @keyframes App-logo-spin {
