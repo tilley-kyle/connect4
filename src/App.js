@@ -7,6 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      turn: 'R',
       board: [
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -23,15 +24,7 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  setBoardState(rowCoord, colCoord) {
-    if (this.state.board[rowCoord][colCoord] === 0) {
-      let arr = this.state.board;
-      arr[rowCoord][colCoord] = 1;
-      this.setState({board: arr})
-    }
-  }
-
-  handleClick(coords, setBoardState) {
+  handleClick(coords) {
     let rowCoord, colCoord;
     if (coords < 10) {
       rowCoord = 0;
@@ -41,11 +34,16 @@ class App extends React.Component {
       rowCoord = Number.parseInt(string[0]);
       colCoord = Number.parseInt(string[1]);
     }
-    console.log(rowCoord, '---', colCoord);
     if (this.state.board[rowCoord][colCoord] === 0) {
       let arr = this.state.board;
-      arr[rowCoord][colCoord] = 1;
-      this.setState({board: arr})
+      arr[rowCoord][colCoord] = this.state.turn;
+      if (this.state.turn === 'R') {
+         this.setState({turn: 'B'})
+       } else {
+         this.setState({turn: 'R'});
+       }
+      this.setState({board: arr});
+
     }
   }
 
