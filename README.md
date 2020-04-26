@@ -8,8 +8,10 @@ Current issues to address as of 4/26/2020:
 > Handle win conditions
 > - Functions to check for horizontal, vertical, diagonal wins
 > - Function to check if game is a draw
+> - If a win/draw is found, announce it and ask if they want to play again
 
 > Button to restart game
+> - Maybe have a pop-up that asks the players if they're sure
 
 > Text notifications of game state
 > - Whose turn it is
