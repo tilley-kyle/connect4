@@ -15,7 +15,7 @@ const Tile = (props) => {
     rowCoord = Number.parseInt(string[0]);
     colCoord = Number.parseInt(string[1]);
   }
-  console.log(rowCoord, colCoord);
+  
   return (
     <div className="Tile" style={divStyle} onClick={() => props.handleClick(props.place)} >{props.piece[rowCoord][colCoord]}</div>
   )
