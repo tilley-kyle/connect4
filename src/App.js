@@ -16,10 +16,10 @@ class App extends React.Component {
   componentDidMount() {
     fetch('http://127.0.0.1:3001')
     .then( res => {
-      console.log(res)
-      // .then( data => {
-      //   console.log(data)
-      // })
+      res.json()
+      .then( data => {
+        console.log(data)
+      })
     })
   }
 
