@@ -1,6 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-Connect4
+## Connect4
 
 If you don't know the rules, I can point you to google.
 
@@ -29,3 +27,4 @@ Current issues to address as of 4/26/2020:
 > - If you've looked at the app, you'll know
 
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
