@@ -20,6 +20,11 @@ Current issues to address as of 4/26/2020:
 > Clean handleClick function in App.js
 > - Separtae into smaller function to handle separation of concerns
 
+> Why is my board actually made
+> - Look into src/BoardMaker.jsx
+> - Doesn't have anything that actuall places the tiles around
+>   - The way I read it, all tiles should be placed on top of eachother
+
 > Work on styling
 > - If you've looked at the app, you'll know
 

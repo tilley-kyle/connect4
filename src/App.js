@@ -8,20 +8,19 @@ class App extends React.Component {
     super(props)
     this.state = {
       turn: 'R',
-      board: [
-        [],
-        [],
-        [],
-        [],
-        [],
-        [],
-        [],
-        [],
-        [],
-        []
-      ]
+      board: [ [], [], [], [], [], [], [], [], [], [] ]
     }
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount() {
+    fetch('http://127.0.0.1:3001')
+    .then( res => {
+      console.log(res)
+      // .then( data => {
+      //   console.log(data)
+      // })
+    })
   }
 
   handleClick(coords) {
