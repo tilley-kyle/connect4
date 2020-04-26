@@ -8,7 +8,7 @@ const Tile = (props) => {
   }
   console.log(props.rowStart, props.colStart)
   return (
-    <div className="Tile" style={divStyle}><p>hi</p></div>
+    <div className="Tile" style={divStyle} onClick={props.handleClick}><p>hi</p></div>
   )
 }
 
