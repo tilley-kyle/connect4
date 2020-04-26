@@ -3,8 +3,8 @@ import './App.css';
 
 const Tile = (props) => {
   const divStyle ={
-    "gridRowStart": `2`,
-    "gridColumnStart": `3`
+    "gridRowStart": `${props.rowStart}`,
+    "gridColumnStart": `${props.colStart}`
   }
   console.log(props.rowStart, props.colStart)
   return (

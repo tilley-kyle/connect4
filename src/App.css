@@ -42,7 +42,9 @@
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
   grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
   min-height: 75vh;
+  max-height: 80vh;
   min-width: 75vw;
+  max-width: 80vh;
   color: black;
   background-color: aqua;
 

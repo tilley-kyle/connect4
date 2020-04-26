@@ -9,9 +9,11 @@ const BoardMaker = (props) => {
   };
   return (
     arr.map( (val) => {
-      let rowCount = 1;
-      let colCount = 1;
+      let rowCount = 0;
+      let colCount = 0;
+      return (
       <Tile rowStart={rowCount} colStart={colCount} />
+      )
     })
   )
 
