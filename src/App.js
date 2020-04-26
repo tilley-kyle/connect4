@@ -50,7 +50,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App-header">
-        <div className="Board"><BoardMaker handleClick={this.handleClick} /></div>
+        <div className="Board"><BoardMaker handleClick={this.handleClick} piece={this.state.board}/></div>
       </div>
     )
   }

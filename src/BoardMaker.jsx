@@ -13,7 +13,7 @@ const BoardMaker = (props) => {
       // let colCount = -1;
 
       return (
-      <Tile key={val} rowStart='0' colStart='0' place={val} handleClick={props.handleClick} />
+      <Tile key={val} rowStart='0' colStart='0' place={val} handleClick={props.handleClick} piece={props.piece}/>
       )
     })
   )
