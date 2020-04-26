@@ -23,7 +23,15 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(coords) {
+  setBoardState(rowCoord, colCoord) {
+    if (this.state.board[rowCoord][colCoord] === 0) {
+      let arr = this.state.board;
+      arr[rowCoord][colCoord] = 1;
+      this.setState({board: arr})
+    }
+  }
+
+  handleClick(coords, setBoardState) {
     let rowCoord, colCoord;
     if (coords < 10) {
       rowCoord = 0;
@@ -34,6 +42,11 @@ class App extends React.Component {
       colCoord = Number.parseInt(string[1]);
     }
     console.log(rowCoord, '---', colCoord);
+    if (this.state.board[rowCoord][colCoord] === 0) {
+      let arr = this.state.board;
+      arr[rowCoord][colCoord] = 1;
+      this.setState({board: arr})
+    }
   }
 
   render() {
