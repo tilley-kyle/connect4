@@ -9,16 +9,16 @@ class App extends React.Component {
     this.state = {
       turn: 'R',
       board: [
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        [, , , , , , , , ,],
+        [, , , , , , , , ,],
+        [, , , , , , , , ,],
+        [, , , , , , , , ,],
+        [, , , , , , , , ,],
+        [, , , , , , , , ,],
+        [, , , , , , , , ,],
+        [, , , , , , , , ,],
+        [, , , , , , , , ,],
+        [, , , , , , , , ,]
       ]
     }
     this.handleClick = this.handleClick.bind(this);
@@ -34,16 +34,17 @@ class App extends React.Component {
       rowCoord = Number.parseInt(string[0]);
       colCoord = Number.parseInt(string[1]);
     }
-    if (this.state.board[rowCoord][colCoord] === 0) {
-      let arr = this.state.board;
-      arr[rowCoord][colCoord] = this.state.turn;
-      if (this.state.turn === 'R') {
-         this.setState({turn: 'B'})
-       } else {
-         this.setState({turn: 'R'});
-       }
-      this.setState({board: arr});
-
+    if (rowCoord === 9 || this.state.board[rowCoord + 1][colCoord]) {
+      if (!this.state.board[rowCoord][colCoord]) {
+        let arr = this.state.board;
+        arr[rowCoord][colCoord] = this.state.turn;
+        if (this.state.turn === 'R') {
+          this.setState({ turn: 'B' })
+        } else {
+          this.setState({ turn: 'R' });
+        }
+        this.setState({ board: arr });
+      }
     }
   }
 
@@ -51,7 +52,7 @@ class App extends React.Component {
     return (
       <div className="App-header">
         <h1 className="Title">Connect4</h1>
-        <div className="Board"><BoardMaker handleClick={this.handleClick} piece={this.state.board}/></div>
+        <div className="Board"><BoardMaker handleClick={this.handleClick} piece={this.state.board} /></div>
       </div>
     )
   }
