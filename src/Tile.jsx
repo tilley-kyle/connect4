@@ -6,7 +6,16 @@ const Tile = (props) => {
     "gridRowStart": `${props.rowStart}`,
     "gridColumnStart": `${props.colStart}`
   }
-  console.log(props.rowStart, props.colStart)
+  let rowCoord, colCoord;
+  if (props.place < 10) {
+    rowCoord = 0;
+    colCoord = props.place;
+  } else if (props.place > 9) {
+    let string = props.place.toString();
+    rowCoord = Number.parseInt(string[0]);
+    colCoord = Number.parseInt(string[1]);
+  }
+  console.log(rowCoord, '---', colCoord);
   return (
     <div className="Tile" style={divStyle} onClick={props.handleClick}><p>hi</p></div>
   )
