@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Board from './Board.jsx';
+import BoardMaker from './BoardMaker.jsx';
 
 
 class App extends React.Component {
@@ -14,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App-header">
-        <div className="Board"><Board /></div>
+        <div className="Board"><BoardMaker /></div>
       </div>
       )}
 }

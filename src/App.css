@@ -29,9 +29,12 @@
 }
 
 .Tile {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  margin: auto;
+  /* grid-column-start: 2;
+  grid-column-end: 3; */
+  display: flex;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
 }
 
 .Board {
