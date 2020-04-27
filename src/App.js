@@ -8,20 +8,27 @@ class App extends React.Component {
     super(props)
     this.state = {
       turn: 'R',
-      winTotal: {redWins: 0, blueWins: 0},
+      winTotal: {redWins: 1, blueWins: 0},
       board: [ [], [], [], [], [], [], [], [], [], [] ]
     }
     this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
-    fetch('http://127.0.0.1:3001')
-    .then( res => {
-      res.json()
-      .then( data => {
-        console.log(data)
-      })
-    })
+    // fetch('http://127.0.0.1:3001')
+    // .then( res => {
+    //   res.json()
+    //   .then( data => {
+    //     console.log(data)
+    //   })
+    // })
+    const options = {
+      method: 'POST',
+      mode: 'cors',
+      headers: {'Content-type': 'application/json'},
+      body: JSON.stringify({currWins: this.state.winTotal, winner: 'R'})
+    }
+    fetch('http://127.0.0.1:3001', options)
   }
 
   handleClick(coords) {
