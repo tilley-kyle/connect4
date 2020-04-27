@@ -8,6 +8,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       turn: 'R',
+      winTotal: {redWins: 0, blueWins: 0},
       board: [ [], [], [], [], [], [], [], [], [], [] ]
     }
     this.handleClick = this.handleClick.bind(this);
