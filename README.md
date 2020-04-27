@@ -26,5 +26,9 @@ Current issues to address as of 4/26/2020:
 > Work on styling
 > - If you've looked at the app, you'll know
 
+> DB tracking team wins
+> - Update function on mongoose not working properly.
+> - Data is being passed into function in proper form
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
