@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import BoardMaker from './components/BoardMaker.jsx';
+import NewGame from './components/NewGame.jsx';
 
 
 class App extends React.Component {
@@ -12,6 +13,7 @@ class App extends React.Component {
       board: [ [], [], [], [], [], [], [], [], [], [] ]
     }
     this.handleClick = this.handleClick.bind(this);
+    this.handleNewGame = this.handleNewGame.bind(this);
   }
 
   componentDidMount() {
@@ -55,11 +57,17 @@ class App extends React.Component {
     }
   }
 
+  handleNewGame() {
+    this.setState({board: [ [], [], [], [], [], [], [], [], [], [] ]});
+  }
+
+
   render() {
     return (
       <div className="App-header">
         <h1 className="Title">Connect4</h1>
         <div className="Board"><BoardMaker handleClick={this.handleClick} piece={this.state.board} /></div>
+        <NewGame handleNewGame={this.handleNewGame} />
       </div>
     )
   }
