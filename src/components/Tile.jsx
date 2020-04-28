@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 
 const Tile = (props) => {
   const divStyle ={
@@ -15,7 +15,7 @@ const Tile = (props) => {
     rowCoord = Number.parseInt(string[0]);
     colCoord = Number.parseInt(string[1]);
   }
-  
+
   return (
     <div className="Tile" style={divStyle} onClick={() => props.handleClick(props.place)} >{props.piece[rowCoord][colCoord]}</div>
   )

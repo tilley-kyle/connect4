@@ -7,13 +7,13 @@ const queries = {
         redWins: object.redWins + 1,
         blueWins: object.blueWins
       };
-      Connect4.update(object, update);
+      Connect4.findOneAndUpdate(object, update);
     } else if (team === 'B') {
       const update = {
         redWins: object.redWins,
         blueWins: object.blueWins + 1
       };
-      Connect4.update(object, update);
+      Connect4.findOneAndUpdate(object, update);
     }
   }
 };

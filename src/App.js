@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import BoardMaker from './BoardMaker.jsx';
+import BoardMaker from './components/BoardMaker.jsx';
 
 
 class App extends React.Component {

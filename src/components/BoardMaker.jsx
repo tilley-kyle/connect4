@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 import Tile from './Tile.jsx';
 
 const BoardMaker = (props) => {
