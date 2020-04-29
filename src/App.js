@@ -3,6 +3,8 @@ import './App.css';
 import BoardMaker from './components/BoardMaker.jsx';
 import NewGame from './components/NewGame.jsx';
 
+const vertWin = require('./winFunctions/vertWin.jsx');
+
 
 class App extends React.Component {
   constructor(props) {
@@ -10,7 +12,8 @@ class App extends React.Component {
     this.state = {
       turn: 'R',
       winTotal: {redWins: 1, blueWins: 0},
-      board: [ [], [], [], [], [], [], [], [], [], [] ]
+      board: [ [], [], [], [], [], [], [], [], [], [] ],
+      lastMove: []
     }
     this.handleClick = this.handleClick.bind(this);
     this.handleNewGame = this.handleNewGame.bind(this);
@@ -55,6 +58,7 @@ class App extends React.Component {
         this.setState({ board: arr });
       }
     }
+    vertWin();
   }
 
   handleNewGame() {
