@@ -2,10 +2,10 @@ import React from 'react';
 import '../App.css';
 
 const Tile = (props) => {
-  const divStyle ={
-    "gridRowStart": `${props.rowStart}`,
-    "gridColumnStart": `${props.colStart}`
-  }
+  // const divStyle ={
+  //   "gridRowStart": `${props.rowStart}`,
+  //   "gridColumnStart": `${props.colStart}`
+  // }
   let rowCoord, colCoord;
   if (props.place < 10) {
     rowCoord = 0;
@@ -17,7 +17,7 @@ const Tile = (props) => {
   }
 
   return (
-    <div className="Tile" style={divStyle} onClick={() => props.handleClick(props.place)} >{props.piece[rowCoord][colCoord]}</div>
+    <div className="Tile"  onClick={() => props.handleClick(props.place)} >{props.piece[rowCoord][colCoord]}</div>
   )
 }
 

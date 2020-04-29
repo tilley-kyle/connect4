@@ -22,6 +22,9 @@ Current issues to address as of 4/26/2020:
 > - Look into src/BoardMaker.jsx
 > - Doesn't have anything that actuall places the tiles around
 >   - The way I read it, all tiles should be placed on top of eachother
+> #### ANSWER
+> - grid template set up the board and how many elements could be placed. So just
+> - - iterating the proper amount of times handles it
 
 > Work on styling
 > - If you've looked at the app, you'll know
