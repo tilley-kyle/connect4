@@ -3,7 +3,8 @@ import './App.css';
 import BoardMaker from './components/BoardMaker.jsx';
 import NewGame from './components/NewGame.jsx';
 
-const vertWin = require('./winFunctions/vertWin.jsx');
+const vertWin = require('./winFunctions/vertWin.js');
+const coordMaker = require('./helperFunctions/coordMaker.js');
 
 
 class App extends React.Component {
@@ -36,20 +37,12 @@ class App extends React.Component {
     fetch('http://127.0.0.1:3001', options)
   }
 
-  handleClick(coords) {
-    let rowCoord, colCoord;
-    if (coords < 10) {
-      rowCoord = 0;
-      colCoord = coords;
-    } else if (coords > 9) {
-      let string = coords.toString();
-      rowCoord = Number.parseInt(string[0]);
-      colCoord = Number.parseInt(string[1]);
-    }
-    if (rowCoord === 9 || this.state.board[rowCoord + 1][colCoord]) {
-      if (!this.state.board[rowCoord][colCoord]) {
+  handleClick(e) {
+    const coords = coordMaker(e);
+    if (coords[0] === 9 || this.state.board[coords[0] + 1][coords[1]]) {
+      if (!this.state.board[coords[0]][coords[1]]) {
         let arr = this.state.board;
-        arr[rowCoord][colCoord] = this.state.turn;
+        arr[coords[0]][coords[1]] = this.state.turn;
         if (this.state.turn === 'R') {
           this.setState({ turn: 'B' })
         } else {
