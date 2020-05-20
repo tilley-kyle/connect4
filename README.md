@@ -4,26 +4,32 @@ If you don't know the rules, I can point you to google.
 
 Current issues to address as of 4/26/2020:
 > Handle win conditions
-> - Functions to check for horizontal, vertical, diagonal wins
-> - Function to check if game is a draw
+> - Functions to check for
+> - - [ ] horizontal
+> - - [x] vertical
+> - - - [ ] glitch in vertical win declaring a win if pressing an illegal space not directly above a played position
+> - - [ ] diagonal wins
+> - [ ] Function to check if game is a draw
 > - If a win/draw is found, announce it and ask if they want to play again
+> - - [x] Win is announced
+> - - [ ] Aski if they want to play again
 
 > Button to restart game
-> - Maybe have a pop-up that asks the players if they're sure
+> - [ ] Maybe have a pop-up that asks the players if they're sure
 
 > Text notifications of game state
-> - Whose turn it is
-> - notificatoin if previous turn was invali
+> - [ ] Whose turn it is
+> - [ ] notificatoin if previous turn was invali
 
 > Clean handleClick function in App.js
-> - Separtae into smaller function to handle separation of concerns
+> - [ ] Separtae into smaller function to handle separation of concerns
 
 > Work on styling
-> - If you've looked at the app, you'll know
+> - [ ] If you've looked at the app, you'll know
 
 > DB tracking team wins
-> - Update function on mongoose not working properly.
-> - Data is being passed into function in proper form
+> - [ ] Update function on mongoose not working properly.
+> - [ ] Data is being passed into function in proper form
 
 > SOLVED Why is my board actually made
 > - Look into src/BoardMaker.jsx

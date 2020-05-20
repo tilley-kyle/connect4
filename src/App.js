@@ -12,8 +12,8 @@ class App extends React.Component {
     super(props)
     this.state = {
       turn: 'R',
-      winTotal: {redWins: 1, blueWins: 0},
-      board: [ [], [], [], [], [], [], [], [], [], [] ],
+      winTotal: { redWins: 1, blueWins: 0 },
+      board: [[], [], [], [], [], [], [], [], [], []],
       lastMove: [],
     }
     this.handleClick = this.handleClick.bind(this);
@@ -53,18 +53,18 @@ class App extends React.Component {
   }
 
   handleNewGame() {
-    this.setState({board: [ [], [], [], [], [], [], [], [], [], [] ]});
+    this.setState({ board: [[], [], [], [], [], [], [], [], [], []] });
   }
 
 
   render() {
     const { board } = this.state
     return (
-      <div className="App-header">
-        <h1 className="Title">Connect4</h1>
-        <div className="Board"><BoardMaker handleClick={this.handleClick} piece={board} /></div>
-        <NewGame handleNewGame={this.handleNewGame} />
-      </div>
+        <div className="App">
+          <h1 className="Title">Connect4</h1>
+          <div className="Board"><BoardMaker handleClick={this.handleClick} piece={board} /></div>
+          <NewGame handleNewGame={this.handleNewGame} />
+        </div>
     )
   }
 }
