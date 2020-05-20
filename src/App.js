@@ -14,7 +14,7 @@ class App extends React.Component {
       turn: 'R',
       winTotal: {redWins: 1, blueWins: 0},
       board: [ [], [], [], [], [], [], [], [], [], [] ],
-      lastMove: []
+      lastMove: [],
     }
     this.handleClick = this.handleClick.bind(this);
     this.handleNewGame = this.handleNewGame.bind(this);
@@ -28,31 +28,28 @@ class App extends React.Component {
     //     console.log(data)
     //   })
     // })
-    const options = {
-      method: 'POST',
-      mode: 'cors',
-      headers: {'Content-type': 'application/json'},
-      body: JSON.stringify({currWins: this.state.winTotal, winner: 'R'})
-    }
-    fetch('http://127.0.0.1:3001', options)
+    // const options = {
+    //   method: 'POST',
+    //   mode: 'cors',
+    //   headers: {'Content-type': 'application/json'},
+    //   body: JSON.stringify({currWins: this.state.winTotal, winner: 'R'})
+    // }
+    // fetch('http://127.0.0.1:3001', options)
   }
 
   handleClick(e) {
-    const { board, lastMove } = this.state;
+    const { board, turn } = this.state;
     const coords = coordMaker(e);
-    if (coords[0] === 9 || this.state.board[coords[0] + 1][coords[1]]) {
-      if (!this.state.board[coords[0]][coords[1]]) {
-        let arr = this.state.board;
-        arr[coords[0]][coords[1]] = this.state.turn;
-        if (this.state.turn === 'R') {
-          this.setState({ turn: 'B' })
-        } else {
-          this.setState({ turn: 'R' });
-        }
+    if (coords[0] === 9 || board[coords[0] + 1][coords[1]]) {
+      if (!board[coords[0]][coords[1]]) {
+        let arr = board;
+        arr[coords[0]][coords[1]] = turn;
+        (turn === 'R') ? (this.setState({ turn: 'B' })) : (this.setState({ turn: 'R' }));
         this.setState({ board: arr });
       }
     }
-    vertWin(board, lastMove);
+    if (vertWin(board, coords, turn)) alert(`${turn} wins!`);
+
   }
 
   handleNewGame() {
@@ -61,10 +58,11 @@ class App extends React.Component {
 
 
   render() {
+    const { board } = this.state
     return (
       <div className="App-header">
         <h1 className="Title">Connect4</h1>
-        <div className="Board"><BoardMaker handleClick={this.handleClick} piece={this.state.board} /></div>
+        <div className="Board"><BoardMaker handleClick={this.handleClick} piece={board} /></div>
         <NewGame handleNewGame={this.handleNewGame} />
       </div>
     )
