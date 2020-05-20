@@ -1,8 +1,3 @@
-//input: num
-//output: arr
-//const: NA
-//edgecases: na
-
 const coordMaker = (num) => {
   let rowCoord, colCoord;
     if (num < 10) {
