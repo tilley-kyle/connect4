@@ -38,6 +38,7 @@ class App extends React.Component {
   }
 
   handleClick(e) {
+    const { board, lastMove } = this.state;
     const coords = coordMaker(e);
     if (coords[0] === 9 || this.state.board[coords[0] + 1][coords[1]]) {
       if (!this.state.board[coords[0]][coords[1]]) {
@@ -51,7 +52,7 @@ class App extends React.Component {
         this.setState({ board: arr });
       }
     }
-    vertWin();
+    vertWin(board, lastMove);
   }
 
   handleNewGame() {

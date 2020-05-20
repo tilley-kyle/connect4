@@ -3,7 +3,7 @@
 //constraints: NA
 //edgecases:
 const vertWin = (board, move) => {
-  console.log()
+  console.log(board)
 }
 
 module.exports = vertWin;
