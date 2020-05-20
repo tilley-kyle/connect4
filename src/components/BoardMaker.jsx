@@ -8,18 +8,8 @@ const BoardMaker = (props) => {
     arr.push(i);
   };
   return (
-    arr.map( (val) => {
-      // let rowCount = 0;
-      // let colCount = -1;
-
-      return (
-      <Tile key={val} rowStart='0' colStart='0' place={val} handleClick={props.handleClick} piece={props.piece}/>
-      )
-    })
-  )
-
-
-
+    arr.map((val) =>  <Tile key={val} rowStart='0' colStart='0' place={val} handleClick={props.handleClick} piece={props.piece}/> )
+  );
 }
 
 export default BoardMaker;
