@@ -3,8 +3,9 @@ import './App.css';
 import BoardMaker from './components/BoardMaker.jsx';
 import NewGame from './components/NewGame.jsx';
 
-const vertWin = require('./winFunctions/vertWin.js');
 const coordMaker = require('./helperFunctions/coordMaker.js');
+const vertWin = require('./winFunctions/vertWin.js');
+const horWin = require('./winFunctions/horWin.js');
 
 
 class App extends React.Component {
@@ -48,8 +49,8 @@ class App extends React.Component {
         this.setState({ board: arr });
       }
     }
-    if (vertWin(board, coords, turn)) alert(`${turn} wins!`);
-
+    // if (vertWin(board, coords, turn)) alert(`${turn} wins!`);
+    if (horWin(board, coords, turn)) alert(`${turn} wins!`);
   }
 
   handleNewGame() {

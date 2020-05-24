@@ -7,12 +7,12 @@ Current issues to address as of 4/26/2020:
 > - Functions to check for
 > - - [ ] horizontal
 > - - [x] vertical
-> - - - [ ] glitch in vertical win declaring a win if pressing an illegal space not directly above a played position
+> - - - [x] glitch in vertical win declaring a win if pressing an illegal space not directly above a played position
 > - - [ ] diagonal wins
 > - [ ] Function to check if game is a draw
 > - If a win/draw is found, announce it and ask if they want to play again
 > - - [x] Win is announced
-> - - [ ] Aski if they want to play again
+> - - [ ] Ask if they want to play again
 
 > Button to restart game
 > - [ ] Maybe have a pop-up that asks the players if they're sure
