@@ -2,7 +2,9 @@
 
 If you don't know the rules, I can point you to google.
 
-Current issues to address as of 4/26/2020:
+Current issues to address as of 5/23/2020:
+> Linter prolbems
+> - [ ] Can't change file tage from 'js' to 'jsx'. App crashes
 > Handle win conditions
 > - Functions to check for
 > - - [x] horizontal
