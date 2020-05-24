@@ -23,7 +23,12 @@
     "server": "nodemon ./server/index.js"
   },
   "eslintConfig": {
-    "extends": "airbnb"
+    "extends": "airbnb",
+    "env": {
+      "jest": true,
+      "browser": true,
+      "es6": true
+    }
   },
   "browserslist": {
     "production": [

@@ -48,7 +48,7 @@ class App extends React.Component {
       if (!board[coords[0]][coords[1]]) {
         const arr = board;
         arr[coords[0]][coords[1]] = turn;
-        (turn === 'R') ? (this.setState({ turn: 'B' })) : (this.setState({ turn: 'R' }));
+        this.setState({ turn: (turn === 'R') ? 'B' : 'R' });
         this.setState({ board: arr });
       }
     }
@@ -59,6 +59,7 @@ class App extends React.Component {
       this.setState({ gameOver: true });
       alert(`${turn} wins!`);
     }
+    return null;
   }
 
   handleNewGame() {
@@ -71,9 +72,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="title-box">
-          <div className="dummy"></div>
+          <div className="dummy" />
           <h1 className="Title">Connect4</h1>
-          <Turn turn={turn}/>
+          <Turn turn={turn} />
         </div>
         <div className="Board"><BoardMaker handleClick={this.handleClick} piece={board} /></div>
         <NewGame handleNewGame={this.handleNewGame} />
