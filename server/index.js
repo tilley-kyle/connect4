@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bp = require('body-parser');
-const { getWins } = require('../db/Queries.js');
+const { getWins, updateWins } = require('../db/Queries.js');
 
 const app = express();
 
@@ -20,5 +20,5 @@ app.get('/get-wins', (req, res) => {
 
 
 app.put('/update-wins', (req, res) => {
-  console.log(req.body);
+  updateWins(req.body, res);
 });

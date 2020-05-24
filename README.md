@@ -4,6 +4,8 @@ If you don't know the rules, I can point you to google.
 ### scripts
 #### npm run server
 - Turns on server on port 3001 to
+#### npm run restart-db
+- Starts a new data base record of total wins
 
 ### Steps to work on
 Current issues to address as of 5/23/2020:

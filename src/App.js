@@ -30,6 +30,7 @@ class App extends React.Component {
       .then((data) => {
         this.setState({
           totalWins: {
+            id: 1,
             R: data.data.redWins,
             B: data.data.blueWins,
           },
