@@ -6,6 +6,7 @@ import NewGame from './components/NewGame.jsx';
 const coordMaker = require('./helperFunctions/coordMaker.js');
 const vertWin = require('./winFunctions/vertWin.js');
 const horWin = require('./winFunctions/horWin.js');
+const majDiagWin = require('./winFunctions/majDiagWin.js');
 
 
 class App extends React.Component {
@@ -51,9 +52,9 @@ class App extends React.Component {
         this.setState({ board: arr });
       }
     }
-    if (vertWin(board, coords, turn) ||  horWin(board, coords, turn)) {
-      alert(`${turn} wins!`);
+    if (/*vertWin(board, coords, turn) ||  horWin(board, coords, turn) ||*/ majDiagWin(board, coords, turn)) {
       this.setState({ gameOver: true });
+      alert(`${turn} wins!`);
     }
   }
 

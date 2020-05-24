@@ -19,7 +19,7 @@ Current issues to address as of 4/26/2020:
 
 > Text notifications of game state
 > - [ ] Whose turn it is
-> - [ ] notificatoin if previous turn was invali
+> - [ ] notificatoin if previous turn was invalid
 
 > Clean handleClick function in App.js
 > - [ ] Separtae into smaller function to handle separation of concerns
