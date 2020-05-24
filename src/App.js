@@ -53,7 +53,10 @@ class App extends React.Component {
         this.setState({ board: arr });
       }
     }
-    if (/*vertWin(board, coords, turn) ||  horWin(board, coords, turn) || majDiagWin(board, coords, turn) || */ minDiagWin(board, coords, turn)) {
+    if (vertWin(board, coords, turn) ||
+      horWin(board, coords, turn) ||
+      majDiagWin(board, coords, turn) ||
+      minDiagWin(board, coords, turn)) {
       this.setState({ gameOver: true });
       alert(`${turn} wins!`);
     }

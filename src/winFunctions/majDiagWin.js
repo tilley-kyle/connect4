@@ -13,7 +13,6 @@ const majDiagWin = (board, coords, turn) => {
     if (majorDiag[k] === counterTurn) counter = 0;
     if (counter === 4) return turn;
   }
-  console.log('major', majorDiag)
   return null;
 }
 

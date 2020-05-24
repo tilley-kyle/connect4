@@ -13,7 +13,6 @@ const minDiagWin = (board, coords, turn) => {
     if (minorDiag[k] === counterTurn) counter = 0;
     if (counter === 4) return turn;
   }
-  console.log('minor', minorDiag)
   return null;
 }
 
