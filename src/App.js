@@ -25,7 +25,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://127.0.0.1:3001')
+    axios.get('http://127.0.0.1:3001/get-wins')
+      .then((data) => {
+        console.log(data);
+      });
   }
 
   handleClick(e) {
