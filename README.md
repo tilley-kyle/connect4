@@ -10,7 +10,7 @@ Current issues to address as of 5/23/2020:
 > - - [x] horizontal
 > - - [x] vertical
 > - - - [x] glitch in vertical win declaring a win if pressing an illegal space not directly above a played position
-> - - [ ] diagonal wins
+> - - [x] diagonal wins
 > - [ ] Function to check if game is a draw
 > - If a win/draw is found, announce it and ask if they want to play again
 > - - [x] Win is announced
@@ -20,7 +20,7 @@ Current issues to address as of 5/23/2020:
 > - [ ] Maybe have a pop-up that asks the players if they're sure
 
 > Text notifications of game state
-> - [ ] Whose turn it is
+> - [x] Whose turn it is
 > - [ ] notificatoin if previous turn was invalid
 
 > Clean handleClick function in App.js

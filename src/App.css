@@ -1,5 +1,27 @@
 .Title {
   margin-bottom: 5px;
+  position: relative;
+}
+
+.title-box {
+  min-width: 550px;
+  max-width: 560px;
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+}
+
+.Red {
+  position: relative;
+  padding-top: 60px;
+  padding-left: 30px;
+  color: red;
+}
+
+.Blue {
+  position: relative;
+  padding-top: 60px;
+  padding-left: 30px;
+  color: blue;
 }
 
 .App {

@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import BoardMaker from './components/BoardMaker';
 import NewGame from './components/NewGame';
+import Turn from './components/Turn';
 
 const coordMaker = require('./helperFunctions/coordMaker.js');
 const vertWin = require('./winFunctions/vertWin.js');
@@ -66,10 +67,14 @@ class App extends React.Component {
 
 
   render() {
-    const { board } = this.state;
+    const { board, turn } = this.state;
     return (
       <div className="App">
-        <h1 className="Title">Connect4</h1>
+        <div className="title-box">
+          <div className="dummy"></div>
+          <h1 className="Title">Connect4</h1>
+          <Turn turn={turn}/>
+        </div>
         <div className="Board"><BoardMaker handleClick={this.handleClick} piece={board} /></div>
         <NewGame handleNewGame={this.handleNewGame} />
       </div>
