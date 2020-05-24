@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import axios from 'axios';
 import BoardMaker from './components/BoardMaker';
 import NewGame from './components/NewGame';
 import Turn from './components/Turn';
@@ -24,20 +25,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // fetch('http://127.0.0.1:3001')
-    // .then( res => {
-    //   res.json()
-    //   .then( data => {
-    //     console.log(data)
-    //   })
-    // })
-    // const options = {
-    //   method: 'POST',
-    //   mode: 'cors',
-    //   headers: {'Content-type': 'application/json'},
-    //   body: JSON.stringify({currWins: this.state.winTotal, winner: 'R'})
-    // }
-    // fetch('http://127.0.0.1:3001', options)
+    axios.get('http://127.0.0.1:3001')
   }
 
   handleClick(e) {

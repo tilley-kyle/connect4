@@ -1,7 +1,11 @@
 ## Connect4
-
 If you don't know the rules, I can point you to google.
 
+### scripts
+#### npm run server
+- Turns on server on port 3001 to
+
+### Steps to work on
 Current issues to address as of 5/23/2020:
 > Linter prolbems
 > - [ ] Can't change file tage from 'js' to 'jsx'. App crashes
