@@ -19,7 +19,6 @@ app.get('/get-wins', (req, res) => {
 });
 
 
-app.post('/', (req, res) => {
+app.put('/update-wins', (req, res) => {
   console.log(req.body);
-  queries.winLogger(req.body.currWins, req.body.winner);
 });

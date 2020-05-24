@@ -38,7 +38,12 @@ class App extends React.Component {
   }
 
   handleClick(e) {
-    const { board, turn, gameOver, totalWins } = this.state;
+    const {
+      board,
+      turn,
+      gameOver,
+      totalWins,
+    } = this.state;
     const coords = coordMaker(e);
     if (gameOver) return null;
     if (coords[0] === 9 || board[coords[0] + 1][coords[1]]) {
@@ -55,10 +60,11 @@ class App extends React.Component {
       || minDiagWin(board, coords, turn)) {
       this.setState({ gameOver: true });
       alert(`${turn} wins!`);
-      let newTotalWins = totalWins;
+      const newTotalWins = totalWins;
       newTotalWins[turn] += 1;
-      this.setState({ totalWins: newTotalWins });
-
+      this.setState({ totalWins: newTotalWins }, () => {
+        axios.put('http://127.0.0.1:3001/update-wins', totalWins);
+      });
     }
     return null;
   }
