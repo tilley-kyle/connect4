@@ -7,6 +7,7 @@ const coordMaker = require('./helperFunctions/coordMaker.js');
 const vertWin = require('./winFunctions/vertWin.js');
 const horWin = require('./winFunctions/horWin.js');
 const majDiagWin = require('./winFunctions/majDiagWin.js');
+const minDiagWin = require('./winFunctions/minDiagWin.js');
 
 
 class App extends React.Component {
@@ -52,7 +53,7 @@ class App extends React.Component {
         this.setState({ board: arr });
       }
     }
-    if (/*vertWin(board, coords, turn) ||  horWin(board, coords, turn) ||*/ majDiagWin(board, coords, turn)) {
+    if (/*vertWin(board, coords, turn) ||  horWin(board, coords, turn) || majDiagWin(board, coords, turn) || */ minDiagWin(board, coords, turn)) {
       this.setState({ gameOver: true });
       alert(`${turn} wins!`);
     }
