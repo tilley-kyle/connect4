@@ -8,7 +8,7 @@ const vertWin = (board, coords, turn) => {
   for (let i = 0; i <= 3; i += 1) {
     arrToCheck.push(board[y + i][x]);
   }
-  if (arrToCheck.indexOf(counterTurn) > -1) {
+  if (arrToCheck.indexOf(counterTurn) > -1 || arrToCheck.indexOf(undefined) > -1) {
     return null;
   }
   return turn;
