@@ -13,6 +13,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       turn: 'R',
+      gameOver: false,
       winTotal: { redWins: 1, blueWins: 0 },
       board: [[], [], [], [], [], [], [], [], [], []],
       lastMove: [],
@@ -39,8 +40,9 @@ class App extends React.Component {
   }
 
   handleClick(e) {
-    const { board, turn } = this.state;
+    const { board, turn, gameOver } = this.state;
     const coords = coordMaker(e);
+    if (gameOver) return null;
     if (coords[0] === 9 || board[coords[0] + 1][coords[1]]) {
       if (!board[coords[0]][coords[1]]) {
         let arr = board;
@@ -49,12 +51,14 @@ class App extends React.Component {
         this.setState({ board: arr });
       }
     }
-    // if (vertWin(board, coords, turn)) alert(`${turn} wins!`);
-    if (horWin(board, coords, turn)) alert(`${turn} wins!`);
+    if (vertWin(board, coords, turn) ||  horWin(board, coords, turn)) {
+      alert(`${turn} wins!`);
+      this.setState({ gameOver: true });
+    }
   }
 
   handleNewGame() {
-    this.setState({ board: [[], [], [], [], [], [], [], [], [], []] });
+    this.setState({ board: [[], [], [], [], [], [], [], [], [], []], gameOver: false });
   }
 
 

@@ -5,7 +5,7 @@ If you don't know the rules, I can point you to google.
 Current issues to address as of 4/26/2020:
 > Handle win conditions
 > - Functions to check for
-> - - [ ] horizontal
+> - - [x] horizontal
 > - - [x] vertical
 > - - - [x] glitch in vertical win declaring a win if pressing an illegal space not directly above a played position
 > - - [ ] diagonal wins
