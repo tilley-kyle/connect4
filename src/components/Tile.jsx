@@ -1,24 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../App.css';
 
-const Tile = (props) => {
-  // const divStyle ={
-  //   "gridRowStart": `${props.rowStart}`,
-  //   "gridColumnStart": `${props.colStart}`
-  // }
-  let rowCoord, colCoord;
-  if (props.place < 10) {
+const Tile = ({ place, handleClick, piece }) => {
+  let rowCoord;
+  let colCoord;
+  if (place < 10) {
     rowCoord = 0;
-    colCoord = props.place;
-  } else if (props.place > 9) {
-    let string = props.place.toString();
+    colCoord = place;
+  } else if (place > 9) {
+    const string = place.toString();
     rowCoord = Number.parseInt(string[0]);
     colCoord = Number.parseInt(string[1]);
   }
 
   return (
-    <div className="Tile"  onClick={() => props.handleClick(props.place)} >{props.piece[rowCoord][colCoord]}</div>
-  )
-}
+    <div className="Tile" onClick={() => handleClick(place)} >{piece[rowCoord][colCoord]}</div>
+  );
+};
+
+Tile.propTypes = {
+  place: PropTypes.number.isRequired,
+  handleClick: PropTypes.func.isRequired,
+  piece: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
+};
 
 export default Tile;

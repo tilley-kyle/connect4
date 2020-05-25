@@ -13,8 +13,8 @@ const ScoreBoard = ({ totalWins }) => (
 
 ScoreBoard.propTypes = {
   totalWins: PropTypes.shape({
-    R: PropTypes.string.isRequired,
-    Y: PropTypes.string.isRequired,
+    R: PropTypes.number.isRequired,
+    Y: PropTypes.number.isRequired,
   }).isRequired,
 };
 
