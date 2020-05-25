@@ -34,6 +34,7 @@ Current issues to address as of 5/24/2020:
 
 > Work on styling
 > - [ ] If you've looked at the app, you'll know
+> - [ ] Conditional formatting so the circle changes Yellow or Red depending on who played the turn
 
 > DB tracking team wins
 > - [ ] Update function on mongoose not working properly.
