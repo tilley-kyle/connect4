@@ -13,9 +13,12 @@ const Tile = ({ place, handleClick, piece }) => {
     rowCoord = Number.parseInt(string[0]);
     colCoord = Number.parseInt(string[1]);
   }
-
+  let tile = "Tile";
+  if (piece[rowCoord][colCoord]) {
+    tile = (piece[rowCoord][colCoord] === 'R') ? 'red-tile' : 'yellow-tile';
+  }
   return (
-    <div className="Tile" onClick={() => handleClick(place)} >{piece[rowCoord][colCoord]}</div>
+    <div className={tile} onClick={() => handleClick(place)} ></div>
   );
 };
 

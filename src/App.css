@@ -10,6 +10,14 @@
   grid-template-columns: 1fr 200px 1fr;
 }
 
+.yellow-piece {
+  background-color: #FCD238;
+}
+
+.red-piece {
+  background-color: red;
+}
+
 .Red {
   position: relative;
   align-content: ;
