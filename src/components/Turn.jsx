@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import '../App.css';
 
 const Turn = ({ turn }) => {
-  const turnColor = (turn === 'R') ? 'Red' : 'Blue';
+  const turnColor = (turn === 'R') ? 'Red' : 'Yellow';
   const sentence = `It's ${turnColor}'s Turn`;
   return (
     <div className={turnColor}>

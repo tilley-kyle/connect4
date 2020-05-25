@@ -2,7 +2,7 @@ const vertWin = (board, coords, turn) => {
   const y = coords[0];
   const x = coords[1];
   const arrToCheck = [];
-  const counterTurn = (turn === 'R') ? 'B' : 'R';
+  const counterTurn = (turn === 'R') ? 'Y' : 'R';
 
   if (coords[0] > 6) return null;
   for (let i = 0; i <= 3; i += 1) {

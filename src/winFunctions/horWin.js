@@ -2,7 +2,7 @@ const horWin = (board, coords, turn) => {
   const y = coords[0];
   const x = coords[1];
   const arrToCheck = [];
-  const counterTurn = (turn === 'R') ? 'B' : 'R';
+  const counterTurn = (turn === 'R') ? 'Y' : 'R';
   for (let i = -3; i <= 3; i += 1) {
     arrToCheck.push(board[y][x + i])
   }

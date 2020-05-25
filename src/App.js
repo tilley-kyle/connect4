@@ -4,6 +4,7 @@ import axios from 'axios';
 import BoardMaker from './components/BoardMaker';
 import NewGame from './components/NewGame';
 import Turn from './components/Turn';
+import ScoreBoard from './components/ScoreBoard';
 
 const coordMaker = require('./helperFunctions/coordMaker.js');
 const vertWin = require('./winFunctions/vertWin.js');
@@ -51,7 +52,7 @@ class App extends React.Component {
       if (!board[coords[0]][coords[1]]) {
         const arr = board;
         arr[coords[0]][coords[1]] = turn;
-        this.setState({ turn: (turn === 'R') ? 'B' : 'R' });
+        this.setState({ turn: (turn === 'R') ? 'Y' : 'R' });
         this.setState({ board: arr });
       }
     }
@@ -76,11 +77,11 @@ class App extends React.Component {
 
 
   render() {
-    const { board, turn } = this.state;
+    const { board, turn, totalWins } = this.state;
     return (
       <div className="App">
         <div className="title-box">
-          <div className="dummy" />
+          <ScoreBoard totalWins={totalWins} />
           <h1 className="Title">Connect4</h1>
           <Turn turn={turn} />
         </div>
