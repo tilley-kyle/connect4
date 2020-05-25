@@ -8,7 +8,7 @@ If you don't know the rules, I can point you to google.
 - Starts a new data base record of total wins
 
 ### Steps to work on
-Current issues to address as of 5/23/2020:
+Current issues to address as of 5/24/2020:
 > Linter prolbems
 > - [ ] Can't change file tage from 'js' to 'jsx'. App crashes
 > Handle win conditions
@@ -38,7 +38,8 @@ Current issues to address as of 5/23/2020:
 > DB tracking team wins
 > - [ ] Update function on mongoose not working properly.
 > - - [ ] Db gets reset to random numbers. Don't know cause yet
-> - - - went from R:4 B:2 to R:2 B:0
+> - - - went from R:4 B:2 to R:2 B:0 5/24/2020
+> - - - Can't recreate glitch again 5/24/2020
 > - [x] Data is being passed into function in proper form
 
 > SOLVED Why is my board actually made
