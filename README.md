@@ -37,7 +37,9 @@ Current issues to address as of 5/23/2020:
 
 > DB tracking team wins
 > - [ ] Update function on mongoose not working properly.
-> - [ ] Data is being passed into function in proper form
+> - - [ ] Db gets reset to random numbers. Don't know cause yet
+> - - - went from R:4 B:2 to R:2 B:0
+> - [x] Data is being passed into function in proper form
 
 > SOLVED Why is my board actually made
 > - Look into src/BoardMaker.jsx
