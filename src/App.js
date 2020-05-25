@@ -33,7 +33,7 @@ class App extends React.Component {
           totalWins: {
             id: 1,
             R: data.data.redWins,
-            B: data.data.blueWins,
+            Y: data.data.yellowWins,
           },
         });
       });

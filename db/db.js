@@ -9,7 +9,7 @@ db.once('on', () => console.log('we here now'));
 const connect4Schema = new mongoose.Schema({
   id: Number,
   redWins: Number,
-  blueWins: Number,
+  yellowWins: Number,
 });
 
 const Connect4 = mongoose.model('Connect4', connect4Schema);

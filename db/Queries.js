@@ -14,7 +14,7 @@ exports.updateWins = (req, res) => {
   const send = {
     id: 1,
     redWins: req.R,
-    blueWins: req.B,
+    yellowWins: req.Y,
   };
   Connect4.updateOne({ id: 1 }, send)
     .then(() => {
