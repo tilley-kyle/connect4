@@ -11,7 +11,12 @@ exports.getWins = (req, res) => {
 };
 
 exports.updateWins = (req, res) => {
-  Connect4.findOneAndReplace({ id: 1 }, req)
+  const send = {
+    id: 1,
+    redWins: req.R,
+    blueWins: req.B,
+  };
+  Connect4.updateOne({ id: 1 }, send)
     .then(() => {
       res.status(200);
     })
