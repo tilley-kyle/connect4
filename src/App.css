@@ -17,11 +17,11 @@
   color: red;
 }
 
-.Blue {
+.Yellow {
   position: relative;
   padding-top: 60px;
   padding-left: 30px;
-  color: blue;
+  color: yellow;
 }
 
 .App {
@@ -74,10 +74,10 @@
   width: 100px;
 }
 
-.blue-wins {
+.yellow-wins {
   position: relative;
   top: 30px;
   left: 60px;
-  color: blue;
+  color: yellow;
 }
 

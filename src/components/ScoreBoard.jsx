@@ -7,7 +7,7 @@ const ScoreBoard = ({ totalWins }) => (
   <div className="score-board">
     <div className="scores">Overall Score</div>
     <span className="red-wins">{totalWins.R}</span>
-    <span className="blue-wins">{totalWins.Y}</span>
+    <span className="yellow-wins">{totalWins.Y}</span>
   </div>
 );
 
