@@ -4,7 +4,7 @@ import '../App.css';
 
 const Turn = ({ turn }) => {
   const turnColor = (turn === 'R') ? 'Red' : 'Yellow';
-  const sentence = `It's ${turnColor}'s Turn`;
+  const sentence = `${turnColor}'s Turn`;
   return (
     <div className={turnColor}>
       {sentence}
