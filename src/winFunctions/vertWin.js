@@ -12,6 +12,6 @@ const vertWin = (board, coords, turn) => {
     return null;
   }
   return turn;
-}
+};
 
 module.exports = vertWin;
