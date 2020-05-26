@@ -5,7 +5,7 @@ const majDiagWin = (board, coords, turn) => {
   let counter = 0;
   const counterTurn = (turn === 'R') ? 'Y' : 'R';
   for (let i = -3; i <= 3; i += 1) {
-    if ((x + i < 0 || x + i > 9) || (y + i < 0 || y + i > 9)) i += 1;
+    if ((x + i < 0 || x + i > 9) || (y + i < 0 || y + i > 9)) continue;
     majorDiag.push(board[y + i][x + i]);
   }
   for (let k = 0; k < majorDiag.length; k += 1) {
